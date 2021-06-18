@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>
+            Problem 8
+        </title>
+    </head>
+    <body>
+        <h1>Check console for output</h1> 
+    <script>
+            async function myFetch() {
+            let response = await fetch('htttp//:localhost/user/details');
+                    if (!response.ok) {
+                    throw new Error(`HTTP error!`);
+                    } else {
+                    throw new Error(`HTTP ok!`);
+                    }
+                    }
+                   myFetch().catch(e => {
+                  console.log(e.message);
+          });
+    </script>
+    </body>
+
+</html>
