@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Problem 2</title>
+</head>
+<style>
+    span{
+        color:green; font-size: 20px; font-weight: bold;
+    }
+    #header{
+        color:cyan;
+    }
+</style>
+<body style="text-align:center">
+    <h1 id="header">Camel Case Convertor</h1>
+    <button onclick="run()">click me</button>
+    <br><br>
+    <b><span id="span"></span></b>
+
+    <script type="text/javascript">
+        var str = "harbinger interactive learning";
+        function camelCase(str) {
+            return str.replace("-_", function (a) {
+                return a.toUpperCase();
+            })
+                .replace(/\s(.)/g, function (a) {
+                    return a.toUpperCase();
+                })
+                .replace(/\s/g, '');
+
+        }
+
+
+        function run() {
+            span.innerHTML = camelCase(str);
+        }
+      //  run();
+    </script>
+
+
+</body>
+
+</html>
