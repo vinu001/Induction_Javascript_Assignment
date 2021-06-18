@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            Problem 7
+        </title>
+    </head>
+    <body>
+        <h1>
+            Check Console for output
+        </h1>
+        <script>
+            var p1 = new Promise(function(userid) { 
+            userid(2);
+
+            });
+                            p1.then(function(value) {
+                            if(!(isNaN(value))&& value >0 )
+                            {
+                            return {id: value,username:'admin'};
+                            }
+                            else
+                            {
+                            throw 'throw error';
+                            }
+                            }).catch(function(e) {
+                            console.log(e); 
+                            }).then(function(e){
+                            if(e!=undefined)
+                            console.log(e);
+                            });
+        </script>
+    </body>
+</html>
